@@ -1,0 +1,19 @@
+--Creating a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, gender TEXT,quantity INTEGER, cost INTEGER, size TEXT);
+
+INSERT INTO clothing VALUES (1, "shorts", "Male", 5, 7.00, "Small");
+INSERT INTO clothing VALUES (2, "t-shirt", "Male", 4, 9.00, "Medium");
+INSERT INTO clothing VALUES (3, "hoodies", "Male", 6, 3.00, "Large");
+INSERT INTO clothing VALUES (4, "pants", "Male", 4, 6.00, "Small");
+INSERT INTO clothing VALUES (5, "jackets", "Male", 5, 8.00, "Small");
+
+--display the database orderd by cost.
+SELECT * FROM clothing
+ORDER BY cost desc;
+
+--display total quantity of items in clothing store database
+SELECT SUM(quantity) FROM clothing;
+
+--display only items that are size small in clothing store
+SELECT * FROM clothing WHERE size= "Small";
